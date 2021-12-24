@@ -1,2 +1,3 @@
 node_modules
 *.answer.js
+.DS_Store

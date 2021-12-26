@@ -4,7 +4,7 @@ const { execute, subscribe } = require("graphql");
 const { ApolloServer } = require("apollo-server-express");
 const { SubscriptionServer } = require("subscriptions-transport-ws");
 const { makeExecutableSchema } = require("@graphql-tools/schema");
-const typeDefs = require("./typedef");
+const { typeDefs, dateScalar } = require("./typedef");
 const resolvers = require("./resolver");
 
 (async () => {
@@ -12,7 +12,14 @@ const resolvers = require("./resolver");
   const app = express();
   const httpServer = createServer(app);
 
-  const schema = makeExecutableSchema({ typeDefs, resolvers });
+  // graphql doesnt support scalar type such as Date so we need to implement external https://hasura.io/blog/working-with-dates-time-timezones-graphql-postgresql/
+  const schema = makeExecutableSchema({
+    typeDefs,
+    resolvers: {
+      ...resolvers,
+      Date: dateScalar,
+    },
+  });
 
   const server = new ApolloServer({
     schema,

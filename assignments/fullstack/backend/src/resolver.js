@@ -18,8 +18,10 @@ const resolvers = {
       const chat = { id, text, timestamp };
       // If you want to query via chat array store all chat.
       chats.push(chat);
+      // send chat only related unique chat id
+      var filteredChats = chats.filter((chatElem) => chatElem.id === id);
       // publish chats to unique user channel
-      pubsub.publish(chat.id, { subscribeChat: chats });
+      pubsub.publish(chat.id, { subscribeChat: filteredChats });
       return chats;
     },
   },

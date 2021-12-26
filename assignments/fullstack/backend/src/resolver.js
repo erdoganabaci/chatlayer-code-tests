@@ -14,11 +14,11 @@ const resolvers = {
 
   Mutation: {
     sendChat(_, { id, text, timestamp }) {
-      //each channel should have a unique name because we block to publish all channel
+      // each channel should have a unique name because we block to publish all channel
       const chat = { id, text, timestamp };
       // If you want to query via chat array store all chat.
       chats.push(chat);
-      //publish to unique user channel
+      // publish to unique user channel
       pubsub.publish(chat.id, { subscribeChat: chat });
       return chat;
     },

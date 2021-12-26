@@ -1,12 +1,7 @@
-// @ts-check
 const { createServer } = require("http");
 const express = require("express");
 const { execute, subscribe } = require("graphql");
-const {
-  ApolloServer,
-  // gql
-} = require("apollo-server-express");
-// const { PubSub } = require("graphql-subscriptions");
+const { ApolloServer } = require("apollo-server-express");
 const { SubscriptionServer } = require("subscriptions-transport-ws");
 const { makeExecutableSchema } = require("@graphql-tools/schema");
 const typeDefs = require("./typedef");

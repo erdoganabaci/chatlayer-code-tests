@@ -46,11 +46,18 @@ subscription SubscribeChat($userId: String!) {
 
 
 ```
-
 ## Run locally
 
 ```shell
 npm install
 npm start
+```
+## Developed Npm and Node Version
+```
+node -v
+v16.13.1
+
+npm -v
+8.1.2
 ```
 

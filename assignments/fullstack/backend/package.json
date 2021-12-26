@@ -1,0 +1,21 @@
+{
+  "name": "backend-sinch-echobot-assignment",
+  "version": "1.0.0",
+  "description": "Create basic echo bot with graphQL subscription",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erdogan ABACI",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "^7.1.5",
+    "apollo-server-express": "3.1.2",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "graphql-subscriptions": "^1.2.1",
+    "nodemon": "^2.0.12",
+    "subscriptions-transport-ws": "^0.9.19"
+  }
+}

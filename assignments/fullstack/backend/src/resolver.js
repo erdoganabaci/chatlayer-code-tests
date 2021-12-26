@@ -18,16 +18,16 @@ const resolvers = {
       const chat = { id, text, timestamp };
       // If you want to query via chat array store all chat.
       chats.push(chat);
-      // publish to unique user channel
-      pubsub.publish(chat.id, { subscribeChat: chat });
-      return chat;
+      // publish chats to unique user channel
+      pubsub.publish(chat.id, { subscribeChat: chats });
+      return chats;
     },
   },
 
   Subscription: {
     subscribeChat: {
       subscribe(_, { userId }) {
-        // receive subscription chat from unique userId
+        // receive subscription chats from unique userId
         return pubsub.asyncIterator(userId);
       },
     },

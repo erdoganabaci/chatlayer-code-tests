@@ -13,11 +13,11 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    sendChat(id: String!, text: String!, timestamp: Int!): ChatBot
+    sendChat(id: String!, text: String!, timestamp: Int!): [ChatBot]
   }
 
   type Subscription {
-    subscribeChat(userId: String!): ChatBot
+    subscribeChat(userId: String!): [ChatBot]
   }
 `;
 

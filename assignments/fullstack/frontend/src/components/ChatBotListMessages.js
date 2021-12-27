@@ -5,7 +5,14 @@ import { Chip } from "@material-ui/core";
 // if they've changed, and if the component needs to re-render.
 const ChatBotListMessages = memo(({ combineActorClientMessages }) => {
   return (
-    <div style={{ marginBottom: "5rem" }}>
+    <div
+      style={{
+        padding: "1rem",
+        marginBottom: "5rem",
+        overflow: "auto",
+        maxHeight: "100%",
+      }}
+    >
       {combineActorClientMessages &&
         combineActorClientMessages.map(({ text, actor }, index) => {
           return (
@@ -14,7 +21,7 @@ const ChatBotListMessages = memo(({ combineActorClientMessages }) => {
               style={{ textAlign: actor === "client" ? "right" : "left" }}
             >
               {/* <p style={{ marginBottom: "0.3rem" }}>{id}</p> */}
-              <p style={{ marginBottom: "0.3rem" }}>{actor}</p>
+              {/* <p style={{ marginBottom: "0.3rem" }}>{actor}</p> */}
 
               <Chip
                 style={{ fontSize: "0.9rem" }}

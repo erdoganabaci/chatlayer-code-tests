@@ -7,9 +7,6 @@ console.log("process.env.REACT_APP_HTTP_LINK", process.env.REACT_APP_HTTP_LINK);
 function App() {
   return (
     <div className="App">
-      <div className="header">
-        <h2 className="header">Echo Bot</h2>
-      </div>
       <ChatBotWrapper userId={id} />
     </div>
   );

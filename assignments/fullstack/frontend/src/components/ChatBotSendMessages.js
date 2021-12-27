@@ -24,7 +24,7 @@ const ChatBotSendMessages = memo(({ id, sendMessageCallback }) => {
   };
 
   return (
-    <Container>
+    <Container style={{ marginBottom: "1rem" }}>
       <Grid container spacing={2}>
         <Grid item xs={11}>
           <TextField

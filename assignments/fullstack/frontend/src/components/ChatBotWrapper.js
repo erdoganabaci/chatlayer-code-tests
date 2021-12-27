@@ -22,7 +22,23 @@ const ChatBotWrapper = ({ userId }) => {
   }, [data]);
 
   return (
-    <div>
+    <div
+      style={{
+        minHeight: "100%",
+        display: "grid",
+        gridTemplateRows: "auto 1fr auto",
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <h1 className="header">EchoBot</h1>
+      </div>
       <ChatBotListMessages combineActorClientMessages={messages} />
       <ChatBotSendMessages
         id={userId}

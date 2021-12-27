@@ -15,7 +15,11 @@ Build a chat widget that will allow the user to send a message to the EchoBot's 
 npm install
 npm start
 ```
-
+## Test locally via Cypress
+Before starting the test be sure frontend works fine.
+```shell
+npm test
+```
 ## .env file
 
 ```shell

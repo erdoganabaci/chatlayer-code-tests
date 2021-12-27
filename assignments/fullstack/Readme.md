@@ -10,7 +10,7 @@ Real-time echobot response back to client.The EchoBot is a tiny chatbot that rep
 <img src="https://img.shields.io/badge/-Nodejs%20-%23323330?style=for-the-badge&logo=Node.js&logoColor=green">
 <img src="https://img.shields.io/badge/-Apollo%20GraphQL-311C87?logo=apollo%20graphql&logoColor=white&style=for-the-badge">
 <img src="https://img.shields.io/badge/-Styled%20Components%20-purple?style=for-the-badge&logo=styled-components&logoColor=white">
-
+<img src="https://img.shields.io/badge/-Cypress%20-black?style=for-the-badge&logo=cypress&logoColor=white">
 </p>
 
 

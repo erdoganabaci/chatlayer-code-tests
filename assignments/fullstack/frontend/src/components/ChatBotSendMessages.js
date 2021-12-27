@@ -44,6 +44,7 @@ const ChatBotSendMessages = memo(({ id, sendMessageCallback }) => {
     <StyledGridContainer container spacing={2}>
       <Grid item xs={11}>
         <StyledTextField
+          data-testid={"user-input"}
           onChange={(e) => {
             setText(e.target.value);
           }}
@@ -63,7 +64,12 @@ const ChatBotSendMessages = memo(({ id, sendMessageCallback }) => {
         />
       </Grid>
       <Grid item xs={1}>
-        <StyledButton onClick={onSendMessage} fullWidth variant="contained">
+        <StyledButton
+          data-testid={"user-button"}
+          onClick={onSendMessage}
+          fullWidth
+          variant="contained"
+        >
           Send
         </StyledButton>
       </Grid>

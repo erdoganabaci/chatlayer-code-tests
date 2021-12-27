@@ -33,7 +33,7 @@ const ChatBotListMessages = memo(({ combineActorClientMessages }) => {
   }, [combineActorClientMessages]);
 
   return (
-    <StyledDiv>
+    <StyledDiv data-testid={"user-message-list"}>
       {combineActorClientMessages &&
         combineActorClientMessages.map(({ text, actor }, index) => {
           return (

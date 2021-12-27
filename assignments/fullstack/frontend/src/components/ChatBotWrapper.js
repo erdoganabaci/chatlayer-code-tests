@@ -1,28 +1,15 @@
 import { useState, useEffect } from "react";
-import { useSubscription, gql } from "@apollo/client";
-import {
-  ChatBotSendMessages,
-  ChatBotListMessages,
-} from "./ChatBotListMessages";
+import { useSubscription } from "@apollo/client";
+import ChatBotListMessages from "./ChatBotListMessages";
+import ChatBotSendMessages from "./ChatBotSendMessages";
+import GET_MESSAGES from "../gql/subscriptions/getMessages";
 
-const GET_MESSAGES = gql`
-  subscription SubscribeChat($userId: String!) {
-    subscribeChat(userId: $userId) {
-      id
-      text
-      actor
-      timestamp
-    }
-  }
-`;
-
-const Wrapper = ({ userId }) => {
+const ChatBotWrapper = ({ userId }) => {
   const [messages, setMessages] = useState([]);
-
-  const { data, loading, error } = useSubscription(GET_MESSAGES, {
+  // subscribe each message instantly via Websocket
+  const { data } = useSubscription(GET_MESSAGES, {
     variables: { userId },
   });
-
   const sendMessageCallback = (chatMessage) => {
     setMessages([...messages, chatMessage]);
   };
@@ -31,9 +18,8 @@ const Wrapper = ({ userId }) => {
     if (data) {
       setMessages([...messages, data.subscribeChat]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
-
-  console.log("appdata messages", messages);
 
   return (
     <div>
@@ -46,4 +32,4 @@ const Wrapper = ({ userId }) => {
   );
 };
 
-export default Wrapper;
+export default ChatBotWrapper;

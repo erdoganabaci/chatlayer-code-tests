@@ -3,7 +3,8 @@
 Build a chat widget that will allow the user to send a message to the EchoBot's backend.
 
 ## Important
-<strong>Before start react be sure backend is working.</strong>
+<strong>Before starting reacts be sure the backend is working.
+</strong>
 
 ## Run locally
 

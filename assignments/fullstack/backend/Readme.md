@@ -45,13 +45,13 @@ subscription SubscribeChat($userId: String!) {
 
 ```shell
 npm install
-npm start
+npm run dev
 ```
 
 ## .env file
 
 ```shell
-PORT=1234
+PORT=4040
 ```
 ## Developed Npm and Node Version
 ```

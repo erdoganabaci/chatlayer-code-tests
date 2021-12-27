@@ -3,6 +3,20 @@ import { useSubscription } from "@apollo/client";
 import ChatBotListMessages from "./ChatBotListMessages";
 import ChatBotSendMessages from "./ChatBotSendMessages";
 import GET_MESSAGES from "../gql/subscriptions/getMessages";
+import styled from "styled-components";
+
+const StyledInputButtonWrapperDiv = styled.div`
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+`;
+
+const StyledHeaderDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
 
 const ChatBotWrapper = ({ userId }) => {
   const [messages, setMessages] = useState([]);
@@ -22,29 +36,16 @@ const ChatBotWrapper = ({ userId }) => {
   }, [data]);
 
   return (
-    <div
-      style={{
-        minHeight: "100%",
-        display: "grid",
-        gridTemplateRows: "auto 1fr auto",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+    <StyledInputButtonWrapperDiv>
+      <StyledHeaderDiv>
         <h1 className="header">EchoBot</h1>
-      </div>
+      </StyledHeaderDiv>
       <ChatBotListMessages combineActorClientMessages={messages} />
       <ChatBotSendMessages
         id={userId}
         sendMessageCallback={sendMessageCallback}
       />
-    </div>
+    </StyledInputButtonWrapperDiv>
   );
 };
 

@@ -1,8 +1,25 @@
-import { Container, Grid, TextField, Button } from "@material-ui/core";
+import { Grid, TextField, Button } from "@material-ui/core";
 import { memo, useState } from "react";
 import { useMutation } from "@apollo/client";
 import SEND_MESSAGE from "../gql/mutations/sendMessage";
+import styled from "styled-components";
 
+const StyledTextField = styled(TextField)`
+  & fieldset {
+    border-radius: 3rem;
+  }
+`;
+
+const StyledButton = styled(Button)`
+  border-radius: 3rem !important;
+  background-color: rgb(37, 206, 209) !important;
+  color: white !important;
+`;
+
+const StyledGridContainer = styled(Grid)`
+  width: 100%;
+  padding: 1rem;
+`;
 // Every time your application updates, memo will automatically perform a shallow comparison of props to determine
 // if they've changed, and if the component needs to re-render.
 const ChatBotSendMessages = memo(({ id, sendMessageCallback }) => {
@@ -24,40 +41,33 @@ const ChatBotSendMessages = memo(({ id, sendMessageCallback }) => {
   };
 
   return (
-    <Container style={{ marginBottom: "1rem" }}>
-      <Grid container spacing={2}>
-        <Grid item xs={11}>
-          <TextField
-            onChange={(e) => {
-              setText(e.target.value);
-            }}
-            onKeyDown={(e) => {
-              if (e.code === "Enter") {
-                e.preventDefault();
-                onSendMessage();
-              }
-            }}
-            value={text}
-            size="small"
-            fullWidth
-            variant="outlined"
-            required
-            label="Required"
-            placeholder="Enter message here"
-          />
-        </Grid>
-        <Grid item xs={1}>
-          <Button
-            onClick={onSendMessage}
-            fullWidth
-            variant="contained"
-            style={{ backgroundColor: "rgb(37, 206, 209)", color: "white" }}
-          >
-            Send
-          </Button>
-        </Grid>
+    <StyledGridContainer container spacing={2}>
+      <Grid item xs={11}>
+        <StyledTextField
+          onChange={(e) => {
+            setText(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.code === "Enter") {
+              e.preventDefault();
+              onSendMessage();
+            }
+          }}
+          value={text}
+          size="small"
+          fullWidth
+          variant="outlined"
+          required
+          label="Required Message"
+          placeholder="Write reply ..."
+        />
       </Grid>
-    </Container>
+      <Grid item xs={1}>
+        <StyledButton onClick={onSendMessage} fullWidth variant="contained">
+          Send
+        </StyledButton>
+      </Grid>
+    </StyledGridContainer>
   );
 });
 

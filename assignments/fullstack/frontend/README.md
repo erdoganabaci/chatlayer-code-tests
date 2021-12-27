@@ -6,7 +6,7 @@ Build a chat widget that will allow the user to send a message to the EchoBot's 
 
 
 ## Important
-**Before starting reacts be sure the backend is working.**
+**Before starting react be sure the backend is working.**
 
 
 ## Run locally
@@ -18,7 +18,7 @@ npm start
 
 ## .env file
 
-```
+```shell
 REACT_APP_HTTP_LINK=http://localhost:4040/graphql
 REACT_APP_WEB_SOCKET_LINK=ws://localhost:4040/graphql
 ```

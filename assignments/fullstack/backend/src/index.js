@@ -6,9 +6,10 @@ const { SubscriptionServer } = require("subscriptions-transport-ws");
 const { makeExecutableSchema } = require("@graphql-tools/schema");
 const { typeDefs, dateScalar } = require("./typedef");
 const resolvers = require("./resolver");
+require("dotenv").config();
 
 (async () => {
-  const PORT = 4040;
+  const PORT = process.env.PORT || 4040;
   const app = express();
   const httpServer = createServer(app);
 

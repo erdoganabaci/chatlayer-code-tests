@@ -1,14 +1,31 @@
-import "./App.css";
+// import "./App.css";
 import ChatBotWrapper from "./components/ChatBotWrapper";
 import { v4 as createUUID } from "uuid";
+import styled from "styled-components";
+import GlobalStyle from "./theme/globalStyles";
+
 const id = createUUID();
-console.log("process.env.REACT_APP_HTTP_LINK", process.env.REACT_APP_HTTP_LINK);
+
+const StyledDiv = styled.div`
+  text-align: center;
+  flex-direction: column;
+  color: rgb(90, 90, 90);
+  width: 100%;
+  min-width: 100%;
+  max-width: initial;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  position: initial;
+  min-height: 100vh;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <StyledDiv className="App">
+      <GlobalStyle />
       <ChatBotWrapper userId={id} />
-    </div>
+    </StyledDiv>
   );
 }
 

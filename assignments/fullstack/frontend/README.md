@@ -2,9 +2,12 @@
 
 Build a chat widget that will allow the user to send a message to the EchoBot's backend.
 
+![EchoBot](./echoBot.png)
+
+
 ## Important
-<strong>Before starting reacts be sure the backend is working.
-</strong>
+**Before starting reacts be sure the backend is working.**
+
 
 ## Run locally
 
@@ -12,8 +15,6 @@ Build a chat widget that will allow the user to send a message to the EchoBot's 
 npm install
 npm start
 ```
-
-
 
 ## .env file
 

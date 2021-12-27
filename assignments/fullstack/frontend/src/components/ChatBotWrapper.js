@@ -18,6 +18,16 @@ const StyledHeaderDiv = styled.div`
   flex-direction: column;
 `;
 
+const StyledH1 = styled.h1`
+  background-color: rgb(37, 206, 209);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  margin: 0;
+`;
+
 const ChatBotWrapper = ({ userId }) => {
   const [messages, setMessages] = useState([]);
   // subscribe each message instantly via Websocket
@@ -38,7 +48,7 @@ const ChatBotWrapper = ({ userId }) => {
   return (
     <StyledInputButtonWrapperDiv>
       <StyledHeaderDiv>
-        <h1 className="header">EchoBot</h1>
+        <StyledH1>EchoBot</StyledH1>
       </StyledHeaderDiv>
       <ChatBotListMessages combineActorClientMessages={messages} />
       <ChatBotSendMessages

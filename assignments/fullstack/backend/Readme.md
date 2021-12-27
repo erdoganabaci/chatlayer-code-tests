@@ -4,14 +4,9 @@ This example demonstrates a basic echobot message back as the response.Using Gra
 
 You can test mutation and subscription via apollo studio.
 
+![img](apollo-studio.png)
+
 ```graphql
-query Query {
-  chats {
-    id
-    text
-    timestamp
-  }
-}
 
 mutation Mutation($sendChatId: String!, $text: String!, $timestamp: Int!) {
   sendChat(id: $sendChatId, text: $text, timestamp: $timestamp) {

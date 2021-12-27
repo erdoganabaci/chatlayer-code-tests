@@ -1,6 +1,7 @@
 const { gql } = require("apollo-server-express");
 const { GraphQLScalarType, Kind } = require("graphql");
 
+// implement graphql date scalar type
 const dateScalar = new GraphQLScalarType({
   name: "Date",
   description: "Date custom scalar type",
@@ -25,6 +26,7 @@ const typeDefs = gql`
   type ChatBot {
     id: String!
     text: String!
+    actor: String!
     timestamp: Date!
   }
 
@@ -33,11 +35,16 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    sendChat(id: String!, text: String!, timestamp: Date!): [ChatBot]
+    sendChat(
+      id: String!
+      text: String!
+      actor: String!
+      timestamp: Date!
+    ): ChatBot
   }
 
   type Subscription {
-    subscribeChat(userId: String!): [ChatBot]
+    subscribeChat(userId: String!): ChatBot
   }
 `;
 

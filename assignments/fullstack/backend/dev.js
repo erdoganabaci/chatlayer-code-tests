@@ -1,4 +1,4 @@
-const { httpServer, server } = require("./index");
+const { httpServer, server } = require("./src/index");
 require("dotenv").config();
 
 const PORT = process.env.PORT || 4040;

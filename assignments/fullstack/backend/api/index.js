@@ -3,7 +3,7 @@ const express = require("express");
 const { execute, subscribe } = require("graphql");
 const { ApolloServer } = require("apollo-server-express");
 const {
-  ApolloServerPluginLandingPageGraphQLPlayground,
+  ApolloServerPluginLandingPageLocalDefault,
 } = require("apollo-server-core");
 const { SubscriptionServer } = require("subscriptions-transport-ws");
 const { makeExecutableSchema } = require("@graphql-tools/schema");

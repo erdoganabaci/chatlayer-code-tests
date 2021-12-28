@@ -45,7 +45,7 @@ subscription SubscribeChat($userId: String!) {
 
 ```shell
 npm install
-npm run dev
+npm run start
 ```
 
 ## .env file

@@ -44,10 +44,10 @@ startApolloServer(app, httpServer);
 
 httpServer.listen(PORT, () => {
   console.log(
-    `🚀 Query endpoint ready at http://localhost:${PORT}${server.graphqlPath}`
+    `🚀 Query endpoint ready at http://localhost:${PORT}/api${server.graphqlPath}`
   );
   console.log(
-    `🚀 Subscription endpoint ready at ws://localhost:${PORT}${server.graphqlPath}`
+    `🚀 Subscription endpoint ready at ws://localhost:${PORT}/api${server.graphqlPath}`
   );
 });
 

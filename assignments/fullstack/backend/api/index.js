@@ -2,6 +2,9 @@ const { createServer } = require("http");
 const express = require("express");
 const { execute, subscribe } = require("graphql");
 const { ApolloServer } = require("apollo-server-express");
+const {
+  ApolloServerPluginLandingPageGraphQLPlayground,
+} = require("apollo-server-core");
 const { SubscriptionServer } = require("subscriptions-transport-ws");
 const { makeExecutableSchema } = require("@graphql-tools/schema");
 const { typeDefs, dateScalar } = require("./typedef");
@@ -26,7 +29,7 @@ const schema = makeExecutableSchema({
 const startApolloServer = async (app, httpServer) => {
   server = new ApolloServer({
     schema,
-    introspection: true,
+    plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
   });
   await server.start();
   server.applyMiddleware({ app, path: "/api/graphql" });

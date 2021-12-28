@@ -24,14 +24,13 @@ const startApolloServer = async (app, httpServer) => {
   server = new ApolloServer({
     schema,
   });
-
   await server.start();
-  server.applyMiddleware({ app });
+  server.applyMiddleware({ app, path: "/api/graphql" });
 
-  // SubscriptionServer.create(
-  //   { schema, execute, subscribe },
-  //   { server: httpServer, path: server.graphqlPath }
-  // );
+  SubscriptionServer.create(
+    { schema, execute, subscribe },
+    { server: httpServer, path: server.graphqlPath }
+  );
 };
 
 startApolloServer(app, httpServer);

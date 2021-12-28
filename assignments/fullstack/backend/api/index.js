@@ -26,6 +26,7 @@ const schema = makeExecutableSchema({
 const startApolloServer = async (app, httpServer) => {
   server = new ApolloServer({
     schema,
+    introspection: true,
   });
   await server.start();
   server.applyMiddleware({ app, path: "/api/graphql" });

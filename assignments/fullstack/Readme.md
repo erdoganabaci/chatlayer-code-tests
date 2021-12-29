@@ -17,7 +17,7 @@ Real-time echobot response back to client.The EchoBot is a tiny chatbot that rep
 
 
 
-[Demo](chatlayer-code-tests.vercel.app)
+[Demo](https://chatlayer-code-tests.vercel.app/)
 ## Important!
 **Before starting to react be sure the backend is working. If you click the demo link wait for 10 seconds backend Heroku server will awake soon then you can chat with the bot.**
 

@@ -4,9 +4,9 @@ Build a chat widget that will allow the user to send a message to the EchoBot's 
 
 ![EchoBot](./echoBot.png)
 
-
-## Important
-**Before starting react be sure the backend is working.**
+[Demo](chatlayer-code-tests.vercel.app)
+## Important!
+**Before starting to react be sure the backend is working. If you click the demo link wait for 10 seconds backend Heroku server will awake soon then you can chat with the bot.**
 
 
 ## Run locally
@@ -23,8 +23,8 @@ npm test
 ## .env file
 
 ```shell
-REACT_APP_HTTP_LINK=http://localhost:4040/graphql
-REACT_APP_WEB_SOCKET_LINK=ws://localhost:4040/graphql
+REACT_APP_HTTP_LINK=http://localhost:4040/api/graphql
+REACT_APP_WEB_SOCKET_LINK=ws://localhost:4040/api/graphql
 ```
 ## Developed Npm and Node Version
 ```

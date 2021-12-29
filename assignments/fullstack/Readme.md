@@ -11,11 +11,18 @@ Real-time echobot response back to client.The EchoBot is a tiny chatbot that rep
 <img src="https://img.shields.io/badge/-Apollo%20GraphQL-311C87?logo=apollo%20graphql&logoColor=white&style=for-the-badge">
 <img src="https://img.shields.io/badge/-Styled%20Components%20-purple?style=for-the-badge&logo=styled-components&logoColor=white">
 <img src="https://img.shields.io/badge/-Cypress%20-black?style=for-the-badge&logo=cypress&logoColor=white">
+<img src="https://img.shields.io/badge/-Vercel%20-black?style=for-the-badge&logo=vercel&logoColor=white">
+<img src="https://img.shields.io/badge/-Heroku%20-purple?style=for-the-badge&logo=heroku&logoColor=white">
 </p>
 
 
-### Demo
-<!-- ![demo](example.gif) -->
+
+[Demo](chatlayer-code-tests.vercel.app)
+## Important!
+**Before starting to react be sure the backend is working. If you click the demo link wait for 10 seconds backend Heroku server will awake soon then you can chat with the bot.**
+
+![EchoBot](./frontend/echoBot.png)
+
 
 ### Getting Started
 1. Clone this repo

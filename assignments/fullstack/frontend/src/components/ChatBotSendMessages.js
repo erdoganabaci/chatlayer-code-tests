@@ -8,12 +8,21 @@ const StyledTextField = styled(TextField)`
   & fieldset {
     border-radius: 3rem;
   }
+
+  & input {
+    font-size: 1em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(90, 90, 90);
+    border-radius: 2em;
+    overflow: hidden;
+  }
 `;
 
 const StyledButton = styled(Button)`
   border-radius: 3rem !important;
   background-color: rgb(37, 206, 209) !important;
   color: white !important;
+  margin-right: auto !important;
 `;
 
 const StyledGridContainer = styled(Grid)`

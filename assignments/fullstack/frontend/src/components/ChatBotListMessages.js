@@ -19,6 +19,9 @@ const StyledChip = styled(Chip)`
   & span {
     font-size: 1rem;
   }
+
+  color: rgb(141, 141, 141) !important;
+  background-color: rgb(245, 249, 252) !important;
 `;
 
 // Every time your application updates, memo will automatically perform a shallow comparison of props to determine

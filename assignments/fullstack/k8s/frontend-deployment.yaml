@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-layer-echobot-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chat-layer-echobot-frontend
+  template:
+    metadata:
+      labels: # labels to select/identify the deployment
+        app: chat-layer-echobot-frontend  
+    spec:     # pod spec                  
+      containers: 
+      - name: chat-layer-echobot-frontend 
+        image: chat-layer-echobot-frontend # image we pushed
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000

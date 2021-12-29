@@ -28,3 +28,10 @@ Real-time echobot response back to client.The EchoBot is a tiny chatbot that rep
 1. Clone this repo
 2. `npm install` on both `frontend` and `backend` folders
 3. `npm start`
+
+
+### Run with Docker
+1. Each backend and frontend folder has a Dockerfile and `build.sh` you can simply run `build.sh`.
+2. When you write `docker ps` command you will see like below images both frontend and backend works fine.
+
+![EchoBot](./docker-fullstack.png)

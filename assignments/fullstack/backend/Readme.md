@@ -10,11 +10,12 @@ You can test mutation and subscription via apollo studio.
 
 ```graphql
 
-mutation Mutation($sendChatId: String!, $text: String!, $timestamp: Int!) {
-  sendChat(id: $sendChatId, text: $text, timestamp: $timestamp) {
+mutation Mutation($sendChatId: String!, $text: String!, $timestamp: Date!, $actor: String!, ) {
+  sendChat(id: $sendChatId, text: $text, timestamp: $timestamp, actor: $actor) {
     id
     text
     timestamp
+    actor
   }
 }
 
@@ -23,6 +24,7 @@ subscription SubscribeChat($userId: String!) {
     id
     text
     timestamp
+    actor
   }
 }
 
@@ -34,7 +36,8 @@ subscription SubscribeChat($userId: String!) {
 {
   "sendChatId": "30585e8e-c451-45f3-bdd5-1da639c0a363",
   "text": "hello",
-  "timestamp": 1640480614605
+  "timestamp": 1640480614605,
+  "actor": "client"
 }
 
 {

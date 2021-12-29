@@ -14,7 +14,7 @@ spec:
     spec:     # pod spec                  
       containers: 
       - name: chat-layer-echobot-frontend 
-        image: chat-layer-echobot-frontend # image we pushed
+        image: chat-layer-echobot-frontend:latest # image we pushed
         imagePullPolicy: Never
         ports:
         - containerPort: 3000

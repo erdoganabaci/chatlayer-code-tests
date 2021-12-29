@@ -37,8 +37,9 @@ Real-time echobot response back to client.The EchoBot is a tiny chatbot that rep
 
 ![EchoBot](./docker-fullstack.png)
 
-### Run with Kubernets
+### Run with Kubernetes
 1. Open K8S folder.
-2. First write `minikube start` command in terminal and apply each yaml `kubectl apply -f  backend-deployment.yaml` and `kubectl apply -f  frontend-deployment.yaml`
-3. Access pod from browser using port forward command `kubectl port-forward chat-layer-echobot-frontend 3000:3000
-`
+2. First write `minikube start` command in terminal and be sure attach local docker deamon images to minikube `eval $(minikube -p minikube docker-env)` then apply each yaml `kubectl apply -f backend-deployment.yaml` and `kubectl apply -f  frontend-deployment.yaml`
+3. Access pod from browser using port forward command `kubectl port-forward chat-layer-echobot-frontend-7785b4f454-qscjr 3000:3000`
+
+![Kubernetes-Pods](./kubernetes-pods.png)

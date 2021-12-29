@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { memo, useState, useEffect } from "react";
 import { useSubscription } from "@apollo/client";
 import ChatBotListMessages from "./ChatBotListMessages";
 import ChatBotSendMessages from "./ChatBotSendMessages";
@@ -28,7 +28,7 @@ const StyledH1 = styled.h1`
   margin: 0;
 `;
 
-const ChatBotWrapper = ({ userId }) => {
+const ChatBotWrapper = memo(({ userId }) => {
   const [messages, setMessages] = useState([]);
   // subscribe each message instantly via Websocket
   const { data } = useSubscription(GET_MESSAGES, {
@@ -57,6 +57,6 @@ const ChatBotWrapper = ({ userId }) => {
       />
     </StyledInputButtonWrapperDiv>
   );
-};
+});
 
 export default ChatBotWrapper;

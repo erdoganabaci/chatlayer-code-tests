@@ -4,7 +4,7 @@ Build a chat widget that will allow the user to send a message to the EchoBot's 
 
 ![EchoBot](./echoBot.png)
 
-[Demo](chatlayer-code-tests.vercel.app)
+[Demo](https://chatlayer-code-tests.vercel.app)
 ## Important!
 **Before starting to react be sure the backend is working. If you click the demo link wait for 10 seconds backend Heroku server will awake soon then you can chat with the bot.**
 

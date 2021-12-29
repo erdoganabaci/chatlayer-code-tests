@@ -16,7 +16,7 @@ npm install
 npm start
 ```
 ## Test locally via Cypress
-Before starting the test be sure frontend works fine.
+Before starting the test be sure frontend runs.
 ```shell
 npm test
 ```

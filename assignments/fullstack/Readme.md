@@ -13,8 +13,9 @@ Real-time echobot response back to client.The EchoBot is a tiny chatbot that rep
 <img src="https://img.shields.io/badge/-Cypress%20-black?style=for-the-badge&logo=cypress&logoColor=white">
 <img src="https://img.shields.io/badge/-Vercel%20-black?style=for-the-badge&logo=vercel&logoColor=white">
 <img src="https://img.shields.io/badge/-Heroku%20-purple?style=for-the-badge&logo=heroku&logoColor=white">
+<img src="https://img.shields.io/badge/-Docker%20-blue?style=for-the-badge&logo=Docker&logoColor=white">
+<img src="https://img.shields.io/badge/-Kubernetes%20-blue?style=for-the-badge&logo=Kubernetes&logoColor=white">
 </p>
-
 
 
 [Demo](https://chatlayer-code-tests.vercel.app/)
@@ -35,3 +36,9 @@ Real-time echobot response back to client.The EchoBot is a tiny chatbot that rep
 2. When you write `docker ps` command you will see like below images both frontend and backend works fine.
 
 ![EchoBot](./docker-fullstack.png)
+
+### Run with Kubernets
+1. Open K8S folder.
+2. First write `minikube start` command in terminal and apply each yaml `kubectl apply -f  backend-deployment.yaml` and `kubectl apply -f  frontend-deployment.yaml`
+3. Access pod from browser using port forward command `kubectl port-forward chat-layer-echobot-frontend 3000:3000
+`
